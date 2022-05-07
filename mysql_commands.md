@@ -1,6 +1,6 @@
 ### Back up the database using the following command:
 ```bash
-mysqldump --user=(username) -p(password){Qnf --databases db_amazon | gzip > /opt/db_amazon.gz
+mysqldump --user=(username) -p(password){Qnf --databases database_name | gzip > /opt/filename.gz
                       or  
 mysqldump -u root -p [database_name] > userA.sql                        
 ```
