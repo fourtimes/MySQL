@@ -12,18 +12,21 @@ mysql -u [username] –p[password] [database_name] < [dump_file.sql]
 mysql -u root -p [database_name] < backup_file.sql
 ```
 For more details - https://support.hostway.com/hc/en-us/articles/360000220190-How-to-backup-and-restore-MySQL-databases-on-Linux
+
+#### Specific permission for users (create, insert,update,delete,alter,select)
+```bash
+GRANT CREATE,
+INSERT,
+SELECT,
+UPDATE,DELETE,DROP, ALTER ON database_name.* TO 'username' @'localhost';
+```
+```bash
+#### Read only permission for users
+GRANT SELECT ON database_name.* TO 'username' @'localhost';
+```
+
 # Transfer files
 ##### scp (secure copy)  - Linux system is used to copy file(s) between servers in a secure way.
 ```bash
 scp /home/ubuntu/Desktop/filename crash@192.168.193.83:/home/crash/Desktop/ashli-project
 ```
-
-#### Specific permission for users (create, insert,update,delete,alter,select)
-
-GRANT CREATE,
-INSERT,
-SELECT,
-UPDATE,DELETE,DROP, ALTER ON database_name.* TO 'username' @'localhost';
-
-#### Read only permission for users
-GRANT SELECT ON database_name.* TO 'username' @'localhost';
