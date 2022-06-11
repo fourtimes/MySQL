@@ -1,15 +1,15 @@
 # Mysql backup, restore and etc
-##### Back up the database using the following command:
+##### Back up the database and store the local machine using the following command:
 ```bash
 mysqldump --user=(username) -p(password){Qnf --databases database_name | gzip > /opt/filename.gz
                       or  
-mysqldump -u root -p [database_name] > userA.sql                        
+mysqldump -u root -p [database_name] > target_file.sql                        
 ```
-##### Restore the data one database to another database
+##### Restore the data backup file to database
 ```bash
 mysql -u [username] –p[password] [database_name] < [dump_file.sql]
                         or
-mysql -u root -p [another_database_name] < userA.sql
+mysql -u root -p [database_name] < backup_file.sql
 ```
 For more details - https://support.hostway.com/hc/en-us/articles/360000220190-How-to-backup-and-restore-MySQL-databases-on-Linux
 # Transfer files
