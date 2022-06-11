@@ -13,15 +13,17 @@ mysql -u root -p [database_name] < backup_file.sql
 ```
 For more details - https://support.hostway.com/hc/en-us/articles/360000220190-How-to-backup-and-restore-MySQL-databases-on-Linux
 
-#### Specific permission for users (create, insert,update,delete,alter,select)
+#### Specific permission for users 
 ```bash
+# create, insert,update,delete,alter,select
 GRANT CREATE,
 INSERT,
 SELECT,
 UPDATE,DELETE,DROP, ALTER ON database_name.* TO 'username' @'localhost';
 ```
-```bash
 #### Read only permission for users
+```bash
+# select - read only permission
 GRANT SELECT ON database_name.* TO 'username' @'localhost';
 ```
 
