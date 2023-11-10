@@ -94,7 +94,7 @@ _start the slave node_
 ```mysql
 START SLAVE;
 ```
-_Check the slave replicaition status_
+_Check the slave replication status_
 ```mysql
 SHOW SLAVE STATUS\G;
 [OR]
