@@ -94,6 +94,12 @@ _start the slave node_
 ```mysql
 START SLAVE;
 ```
+_Check the slave replicaition status_
+```mysql
+SHOW SLAVE STATUS\G;
+[OR]
+SHOW REPLICA STATUS\G;
+```
 _**4. Testing the MySQL Master-Slave Replication**_
 
 _Log into MySQL in the Master server_
