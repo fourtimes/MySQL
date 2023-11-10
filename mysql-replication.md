@@ -5,7 +5,7 @@ _**1. Let's create two server's with the same VPC.**_
 Master IP - 10.0.0.10
 Slave IP  - 10.0.0.13
 ```
-_**2.Replication for Master Node**_
+_**2. Replication for Master Node**_
 
 _Install mysql package_
 ```bash
@@ -51,7 +51,7 @@ FLUSH PRIVILEGES;
 SHOW MASTER STATUS\G;
 ```
 
-_**3.Replication for Slave Node**_
+_**3. Replication for Slave Node**_
 
 _Install mysql package_
 ```bash
@@ -94,7 +94,7 @@ _start the slave node_
 ```mysql
 START SLAVE;
 ```
-_**4.Verify the MySQL Master-Slave Replication**_
+_**4. Testing the MySQL Master-Slave Replication**_
 
 _Log into MySQL in the Master server_
 ```bash
@@ -116,7 +116,7 @@ SHOW DATABASES;
 ```
 ![image](https://github.com/fourtimes/MySQL_Docs/assets/91359308/607e3a1b-c194-4302-bfea-51d01ea32626)
 
-Reference 
+_Reference_ 
 - https://snapshooter.com/learn/mysql/MySQL-replication
 - https://www.tecmint.com/setup-mysql-master-slave-replication-on-ubuntu/
 
