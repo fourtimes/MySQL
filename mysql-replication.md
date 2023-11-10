@@ -7,7 +7,7 @@ Slave IP  - 10.0.0.13
 ```
 _**2.Replication for Master Node**_
 
-_install mysql package_
+_Install mysql package_
 ```bash
 sudo apt install mysql-server
 ```
@@ -31,7 +31,8 @@ sudo service mysql status
 _Login to the Database_
 ```mysql
 sudo mysql -u root
-
+```
+```mysql
 # Create a New User for Replication on Master Node
 CREATE USER 'repl'@'10.0.0.13' IDENTIFIED BY 'replica_password';  # this user allow only 10.0.0.13 user.
 [or]
@@ -52,7 +53,7 @@ SHOW MASTER STATUS\G;
 
 _**3.Replication for Slave Node**_
 
-_install mysql package_
+_Install mysql package_
 ```bash
 sudo apt install mysql-server
 ```
@@ -86,6 +87,9 @@ _To allow the slave server to replicate the Master server, run the command._
 ```mysql
 CHANGE MASTER TO MASTER_HOST='10.0.0.10', MASTER_USER='repl', MASTER_PASSWORD='.', MASTER_LOG_FILE='mysql-bin.000001', MASTER_LOG_POS=6257;
 ```
+Note:
+- MASTER_LOG_FILE and MASTER_LOG_POS refer the Master Node using this `SHOW MASTER STATUS\G;`command
+
 _start the slave node_
 ```mysql
 START SLAVE;
@@ -111,3 +115,8 @@ sudo mysql -u root -p
 SHOW DATABASES;
 ```
 ![image](https://github.com/fourtimes/MySQL_Docs/assets/91359308/607e3a1b-c194-4302-bfea-51d01ea32626)
+
+Reference 
+- https://snapshooter.com/learn/mysql/MySQL-replication
+- https://www.tecmint.com/setup-mysql-master-slave-replication-on-ubuntu/
+
