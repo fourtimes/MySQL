@@ -1,6 +1,6 @@
 # MySQL Replications
 
-_**1. Let's create two server's with the same VPC connection.**_
+_**1. Let's create two server's with the same VPC.**_
 ```sh
 Master IP - 10.0.0.10
 Slave IP  - 10.0.0.13
