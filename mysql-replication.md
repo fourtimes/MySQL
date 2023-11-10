@@ -87,7 +87,7 @@ _To allow the slave server to replicate the Master server, run the command._
 ```mysql
 CHANGE MASTER TO MASTER_HOST='10.0.0.10', MASTER_USER='repl', MASTER_PASSWORD='.', MASTER_LOG_FILE='mysql-bin.000001', MASTER_LOG_POS=6257;
 ```
-Note:
+**Note:**
 - MASTER_LOG_FILE and MASTER_LOG_POS refer the Master Node using this `SHOW MASTER STATUS\G;`command
 
 _start the slave node_
