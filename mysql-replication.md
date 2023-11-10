@@ -35,7 +35,7 @@ sudo mysql -u root
 ```mysql
 # Create a New User for Replication on Master Node
 CREATE USER 'repl'@'10.0.0.13' IDENTIFIED BY 'replica_password';  # this user allow only 10.0.0.13 user.
-[or]
+[OR]
 CREATE USER 'repl'@'%' IDENTIFIED BY 'replica_password';    # this user allow all mysql remote user's
 ```
 ```mysql
