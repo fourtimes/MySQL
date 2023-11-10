@@ -6,6 +6,7 @@ Master IP - 10.0.0.10
 Slave IP  - 10.0.0.13
 ```
 _**2.Replication for Master Node**_
+
 _install mysql package_
 ```bash
 sudo apt install mysql-server
@@ -50,6 +51,7 @@ SHOW MASTER STATUS\G;
 ```
 
 _**3.Replication for Slave Node**_
+
 _install mysql package_
 ```bash
 sudo apt install mysql-server
@@ -89,6 +91,7 @@ _start the slave node_
 START SLAVE;
 ```
 _**4.Verify the MySQL Master-Slave Replication**_
+
 _Log into MySQL in the Master server_
 ```bash
 sudo mysql -u root -p
