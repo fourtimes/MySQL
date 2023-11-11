@@ -1,6 +1,7 @@
 # MySQL Replications
+Replication enables data from one MySQL database server (Master Node) to be copied to one or more MySQL database servers (Slave Node). Replication is asynchronous by default; replicas do not need to be connected permanently to receive updates from the source. Depending on the configuration, you can replicate all databases, selected databases, or even selected tables within a database.
 
-_**1. Let's create two server's with the same VPC.**_
+_**1. Let's create two server's**_
 ```sh
 Master IP - 10.0.0.10
 Slave IP  - 10.0.0.13
@@ -14,7 +15,7 @@ sudo apt install mysql-server
 _add the configurations as per the below instruction._
 ```sh
 # sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf
-bind-address = 10.0.0.10 [or] bind-address = 0.0.0.0    #  0.0.0.0 -  allow all the ip's to the master node replication server
+bind-address = 10.0.0.10
 
 server-id = 1
 
@@ -35,16 +36,13 @@ sudo mysql -u root
 ```mysql
 # Create a New User for Replication on Master Node
 CREATE USER 'repl'@'10.0.0.13' IDENTIFIED BY 'replica_password';  # this user allow only 10.0.0.13 user.
-[OR]
-CREATE USER 'repl'@'%' IDENTIFIED BY 'replica_password';    # this user allow all mysql remote user's
 ```
 ```mysql
 # grant the permission for the specified user.
 GRANT REPLICATION SLAVE ON *.* TO 'repl'@'10.0.0.13' ;
-[OR]
-GRANT REPLICATION SLAVE ON *.* TO 'repl'@'%' ;
 ```
 ```mysql
+FLUSH TABLES WITH READ LOCK;
 FLUSH PRIVILEGES;
 ```
 ```mysql
@@ -60,7 +58,7 @@ sudo apt install mysql-server
 _add the configurations as per the below instruction._
 ```sh
 # sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf
-bind-address = 10.0.0.13 [or] bind-address = 0.0.0.0    #  0.0.0.0 -  allow all the ip's to the master node replication server
+bind-address = 10.0.0.13
 
 server-id = 2
 
