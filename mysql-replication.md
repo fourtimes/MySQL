@@ -98,6 +98,8 @@ SHOW SLAVE STATUS\G;
 [OR]
 SHOW REPLICA STATUS\G;
 ```
+If it is running, it will reflect the `yes`  keyword. So, the meaning is that replication has started.![image](https://github.com/fourtimes/MySQL_Docs/assets/91359308/c91ef5e6-a2be-459e-a345-8dd0c9fdfc91)
+
 _**4. Testing the MySQL Master-Slave Replication**_
 
 _Log into MySQL in the Master server_
