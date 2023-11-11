@@ -126,3 +126,5 @@ _Reference_
 - https://snapshooter.com/learn/mysql/MySQL-replication
 - https://www.tecmint.com/setup-mysql-master-slave-replication-on-ubuntu/
 
+Replication to the specific database
+- https://www.digitalocean.com/community/tutorials/how-to-set-up-replication-in-mysql
