@@ -110,7 +110,9 @@ _Let’s create a test database. In this case, we will create a database called 
 ```mysql
 CREATE DATABASE hello;
 ```
+
 ![image](https://github.com/fourtimes/MySQL_Docs/assets/91359308/ac587299-3e5c-46bb-ac53-cf2424577d6d)
+![image](https://github.com/fourtimes/MySQL_Docs/assets/91359308/0e8ad2fa-78fb-44cf-af6f-3dcddc3f376b)
 
 _Now, log in to your MySQL instance in the slave server_
 
@@ -121,6 +123,9 @@ sudo mysql -u root -p
 SHOW DATABASES;
 ```
 ![image](https://github.com/fourtimes/MySQL_Docs/assets/91359308/607e3a1b-c194-4302-bfea-51d01ea32626)
+
+![image](https://github.com/fourtimes/MySQL_Docs/assets/91359308/4bff30ca-f55d-49a4-89ef-c89646f4f6f7)
+
 
 _Reference_ 
 - https://snapshooter.com/learn/mysql/MySQL-replication
