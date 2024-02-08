@@ -1,4 +1,5 @@
-To install MySQL on macOS, you can use Homebrew, which is a popular package manager for macOS. Follow these steps:
+#### To install MySQL on macOS, you can use Homebrew, which is a popular package manager for macOS. Follow these steps:
+---
 
 **1. Install Homebrew:**
 
