@@ -1,4 +1,4 @@
-# MySQL_Docs
+ # MySQL_Docs
 
 ### What is MySQL?
 ```bash
@@ -155,6 +155,7 @@ _Basic Syntax of MySQL_
 |19.|DELETE FROM table_name WHERE condition; |To delete the row of the table using where condition.|
 |20.|SELECT column1, column2, ...FROM table_name; |To view the specified colums details in specified table.|
 |21.|SELECT * FROM table_name; |To view a details of the entire specified table.|
+|22.|SELECT SUM(TABLE_ROWS) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'YOUR_DATABASE_NAME';| Calculate the database total data.|
 
 ### Reference:-
 
