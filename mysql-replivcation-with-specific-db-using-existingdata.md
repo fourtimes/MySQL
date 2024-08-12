@@ -24,7 +24,7 @@ log_bin_index =/var/log/mysql/mysql-bin.log.index
 relay_log = /var/log/mysql/mysql-relay-bin
 relay_log_index = /var/log/mysql/mysql-relay-bin.index
 
-binlog-do-db = hello
+binlog-do-db = hello # your-database-name
 ```
 _3. Restart the mysql service & check the status of the service_
 ```mysql
@@ -74,7 +74,7 @@ log_bin = /var/log/mysql/mysql-bin.log
 log_bin_index =/var/log/mysql/mysql-bin.log.index
 relay_log = /var/log/mysql/mysql-relay-bin
 relay_log_index = /var/log/mysql/mysql-relay-bin.index
-binlog-do-db = hello
+binlog-do-db = hello # your-database-name
 
 ```
 _4. Restart the mysql service & check the status of the service_
