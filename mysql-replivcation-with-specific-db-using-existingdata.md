@@ -42,16 +42,18 @@ CREATE USER 'repl'@'10.0.0.13' IDENTIFIED BY 'replica_password';  # this user al
 # grant the permission for the specified user.
 GRANT REPLICATION SLAVE ON *.* TO 'repl'@'10.0.0.13' ;
 
+# Lock the Master Database and Get Log Position
 FLUSH TABLES WITH READ LOCK;
 SHOW MASTER STATUS;
 
 SHOW MASTER STATUS\G;
 ```
-5. Backup the Master Database:
+5. Backup the Master Database: While the tables are locked, take a backup of the master database:
 ```mysql
 mysqldump -u root -p --all-databases --master-data > hello.sql
 ```
 6. Unlock the Master Tables:
+       After the backup is complete, unlock the tables:
 ```mysql
 UNLOCK TABLES;
 ```
