@@ -5,7 +5,7 @@ Update and Install the mysql service
 sudo apt update && sudo apt install -y mysql-server
 sudo systemctl start mysql && sudo systemctl enable mysql && sudo systemctl status mysql 
 ```
-Configure Slave Server
+Configure Master Server
 ```cnf
 # sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
 server-id=1
