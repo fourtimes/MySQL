@@ -17,6 +17,10 @@ Restart the mysql service
 ```cmd
 sudo systemctl restart mysql
 ```
+Create database
+```mysql
+CREATE DATABASE erpdata;
+```
 Create Replication User
 ```mysql
 CREATE USER 'repl'@'%' IDENTIFIED WITH mysql_native_password BY 'Password@123';
