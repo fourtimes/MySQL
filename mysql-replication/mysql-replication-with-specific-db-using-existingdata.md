@@ -10,7 +10,7 @@ Slave IP  - 10.0.0.13
 
 _1. Install mysql package_
 ```bash
-sudo apt install mysql-server
+sudo apt install mysql-server -y
 ```
 _2. add the configurations as per the below instruction._
 ```sh
@@ -63,7 +63,7 @@ UNLOCK TABLES;
 _1. Transfer the Backup to the Slave Server:_
 _2. Install mysql package_
 ```bash
-sudo apt install mysql-server
+sudo apt install mysql-server -y
 ```
 _3. Add the configurations as per the below instruction._
 ```sh
